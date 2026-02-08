@@ -71,6 +71,7 @@ CrossKD時の、生徒モデルの特徴量の統計を可視化した
 * 他アーキテクチャ（ViT, MobileNet 等）への適用
 * CrossKD の損失重み・アラインメント位置のアブレーション
 * 特徴量の蒸留とCrossKD知識蒸留を両方同時に行う
+* layer3以外での知識蒸留
 * Mmrazor をベースに、ATSS のCrossKDなどを実装できるか？
 
 
