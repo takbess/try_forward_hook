@@ -34,9 +34,17 @@
 | ResNet18     | Feature KD    | ResNet34     | 10     | ~82.50%       |
 | **ResNet18** | **CrossKD**   | **ResNet34** | **10** | **~85.44%**   |
 
-<img src="assets/loss.png" width="50%">
-<img src="assets/train_acc.png" width="50%">
-<img src="assets/test_acc.png" width="50%">
+<img src="assets/loss.png" width="400">
+
+<img src="assets/train_acc.png" width="400"> <img src="assets/test_acc.png" width="400">
+
+### Analysis
+
+CrossKD時の、生徒モデルの特徴量の統計を可視化した
+
+<img src="assets/mean.png" width="400"> <img src="assets/variance.png" width="400">
+
+通常 KDは、特徴量の分散を下げる方向に働くが、CrossKDは特徴量の分散を上げる方向に働く。
 
 ## 考察
 

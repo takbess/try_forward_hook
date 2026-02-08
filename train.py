@@ -7,6 +7,7 @@ import torch.optim as optim
 import config
 from models import build_model
 from datasets import build_dataloaders
+from crosskd_hooks import VisualizeFeatureHook
 from engine import train_one_epoch, evaluate
 from utils import get_device, save_checkpoint
 
@@ -18,6 +19,12 @@ def main():
         model_name=config.MODEL_NAME,
         num_classes=config.NUM_CLASSES,
     ).to(device)
+
+    # hook = VisualizeFeatureHook(path="log_feat_stats/resnet18.log")
+    hook = VisualizeFeatureHook(path="log_feat_stats/resnet34.log")
+    getattr(model, config.STUDENT_HOOK_LAYER)\
+        .register_forward_hook(hook)
+
 
     trainloader, testloader = build_dataloaders(
         batch_size=config.BATCH_SIZE,

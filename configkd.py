@@ -21,7 +21,7 @@ NUM_WORKERS = 4
 DEVICE = "cuda"
 
 # checkpoint
-SAVE_DIR = "./checkpoints_kd"
+SAVE_DIR = "./checkpoints_kd/train/resnet18_resnet34/"
 SAVE_LAST_NAME = "student_last.pth"
 SAVE_BEST_NAME = "student_best.pth"
 

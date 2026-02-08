@@ -9,7 +9,7 @@ from datasets import build_dataloaders
 from crosskd_hooks import SaveFeatureHook
 from engine_crosskd import train_one_epoch_crosskd, evaluate
 from utils import get_device, save_checkpoint
-
+from utils import log_feat_stats
 
 def main():
     device = get_device(config.DEVICE)
@@ -34,6 +34,8 @@ def main():
         .register_forward_hook(s_hook)
 
     def teacher_pre_hook(module, input):
+        log_feat_stats(s_hook.feat, epoch, -1, path="log_feat_stats/crosskd.log")
+
         return (s_hook.feat,)
 
     getattr(teacher, config.TEACHER_INJECT_LAYER)\

@@ -8,6 +8,7 @@ from models import build_teacher, build_student
 from datasets import build_dataloaders
 from engine_kd import train_one_epoch_kd, evaluate
 from kd_hooks import FeatureHook
+from kd_hooks import FeatureVisualizeHook
 from utils import get_device, save_checkpoint
 
 
@@ -28,7 +29,7 @@ def main():
 
     # hooks
     t_hook = FeatureHook()
-    s_hook = FeatureHook()
+    s_hook = FeatureVisualizeHook(path="log_feat_stats/kd.log")
 
     getattr(teacher, config.KD_LAYER).register_forward_hook(t_hook)
     getattr(student, config.KD_LAYER).register_forward_hook(s_hook)
