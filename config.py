@@ -1,12 +1,9 @@
 # config.py
 
 # model
-TEACHER_MODEL = "resnet34"
-STUDENT_MODEL = "resnet18"
 MODEL_NAME = "resnet34"   # "resnet50" or "resnet101"
 
 NUM_CLASSES = 10
-KD_LAYER = "layer3"
 
 # training
 BATCH_SIZE = 128
@@ -14,7 +11,6 @@ EPOCHS = 10
 LR = 0.1
 MOMENTUM = 0.9
 WEIGHT_DECAY = 5e-4
-LAMBDA_KD = 1.0
 
 # system
 NUM_WORKERS = 4
