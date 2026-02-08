@@ -4,7 +4,7 @@ import torch
 import torch.nn as nn
 import torch.optim as optim
 
-import config
+import config_teacher as config
 from models import build_model
 from datasets import build_dataloaders
 from crosskd_hooks import VisualizeFeatureHook

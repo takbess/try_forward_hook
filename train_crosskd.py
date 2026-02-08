@@ -86,6 +86,11 @@ def main():
             f"Train Acc {acc:.2f}% "
             f"Test Acc {test_acc:.2f}%"
         )
+        # log
+        with open(f"log/{config.MODEL_NAME}.log","a") as f:
+            f.write(
+                f"{epoch},{loss:.4f},{acc:.2f},{test_acc:.2f}\n"
+            )
 
     save_checkpoint(
         student,

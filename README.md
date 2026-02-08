@@ -20,7 +20,10 @@
 * Optimizer / LR: 
 * Epochs: 10
 
-
+## 実行方法
+```bash
+sh/train_all.sh
+```
 
 ## 実験結果
 

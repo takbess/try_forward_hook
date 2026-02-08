@@ -25,4 +25,4 @@ SAVE_DIR = "./checkpoints_kd/train/resnet18_resnet34/"
 SAVE_LAST_NAME = "student_last.pth"
 SAVE_BEST_NAME = "student_best.pth"
 
-teacher_load_from = "./checkpoints/resnet34_epoch10.pth"
+teacher_load_from = "./checkpoints/train/resnet34/last.pth"

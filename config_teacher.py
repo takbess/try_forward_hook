@@ -1,8 +1,8 @@
 # config.py
 
 # model
-MODEL_NAME = "resnet18"   # "resnet50" or "resnet101"
-# MODEL_NAME = "resnet34"   # "resnet50" or "resnet101"
+# MODEL_NAME = "resnet18"   # "resnet50" or "resnet101"
+MODEL_NAME = "resnet34"   # "resnet50" or "resnet101"
 
 NUM_CLASSES = 10
 STUDENT_HOOK_LAYER = "layer3"
@@ -20,7 +20,7 @@ NUM_WORKERS = 4
 DEVICE = "cuda"
 
 # checkpoint
-SAVE_DIR = "./checkpoints/train/resnet18/"
-# SAVE_DIR = "./checkpoints/train/resnet34/"
+# SAVE_DIR = "./checkpoints/train/resnet18/"
+SAVE_DIR = "./checkpoints/train/resnet34/"
 SAVE_LAST_NAME = "last.pth"
 SAVE_BEST_NAME = "best.pth"
